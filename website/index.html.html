@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classic Paints | Premium Paints in Harare</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fffaf3;
+      color: #17213a;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: #003b91;
+    }
+
+    .brand span {
+      color: #e30613;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: #e30613;
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(255,250,243,0.96), rgba(255,250,243,0.76)),
+        url("1000038034.jpg") center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: 80px;
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle, #ffcf33, #ff5a5f, transparent 70%);
+      opacity: 0.22;
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: #e30613;
+      color: white;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 25px rgba(227,6,19,0.25);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 5.4rem);
+      line-height: 1;
+      color: #003b91;
+      margin-bottom: 22px;
+      letter-spacing: -2px;
+    }
+
+    .hero h1 span {
+      color: #e30613;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 640px;
+      color: #30394f;
+      margin-bottom: 28px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 900;
+      transition: 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: #003b91;
+      color: white;
+      box-shadow: 0 12px 25px rgba(0,59,145,0.25);
+    }
+
+    .btn-primary:hover {
+      background: #e30613;
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #003b91;
+      border: 2px solid #003b91;
+    }
+
+    .btn-secondary:hover {
+      background: #003b91;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .hero-logo-card {
+      background: rgba(255,255,255,0.82);
+      border-radius: 34px;
+      padding: 30px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.14);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .hero-logo-card img {
+      width: 100%;
+      display: block;
+      border-radius: 24px;
+      mix-blend-mode: multiply;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-16px); }
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: #003b91;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      max-width: 760px;
+      margin: auto;
+      color: #526077;
+      font-size: 1.05rem;
+    }
+
+    .colour-strip {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      height: 16px;
+    }
+
+    .colour-strip div:nth-child(1) { background: #003b91; }
+    .colour-strip div:nth-child(2) { background: #e30613; }
+    .colour-strip div:nth-child(3) { background: #ffcf33; }
+    .colour-strip div:nth-child(4) { background: #24a148; }
+    .colour-strip div:nth-child(5) { background: #00a6d6; }
+    .colour-strip div:nth-child(6) { background: #f27bbd; }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .feature {
+      background: white;
+      padding: 28px;
+      border-radius: 26px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.07);
+      border-top: 6px solid #e30613;
+    }
+
+    .feature h3 {
+      color: #003b91;
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+    }
+
+    .products {
+      background:
+        linear-gradient(rgba(255,255,255,0.90), rgba(255,255,255,0.94)),
+        url("1000038035.jpg") center/cover fixed no-repeat;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.1);
+      transition: 0.25s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .product-img {
+      height: 250px;
+      background: #f5f7fb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .product-info {
+      padding: 22px;
+    }
+
+    .product-info h3 {
+      color: #003b91;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #fff0f1;
+      color: #e30613;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .brands {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+
+    .brand-box {
+      background: white;
+      padding: 26px;
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.07);
+      font-weight: 900;
+      color: #003b91;
+      font-size: 1.2rem;
+    }
+
+    .showroom {
+      background:
+        linear-gradient(120deg, rgba(0,59,145,0.92), rgba(227,6,19,0.78)),
+        url("1000038033.jpg") center/cover no-repeat;
+      color: white;
+    }
+
+    .showroom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .showroom h2 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .showroom p {
+      font-size: 1.08rem;
+      opacity: 0.95;
+      margin-bottom: 18px;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 30px;
+      border-radius: 28px;
+      backdrop-filter: blur(8px);
+    }
+
+    .contact-card h3 {
+      margin-bottom: 16px;
+      font-size: 1.5rem;
+    }
+
+    .contact-card p {
+      margin-bottom: 12px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25d366;
+      color: white;
+      padding: 15px 19px;
+      border-radius: 999px;
+      font-weight: 900;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.25);
+      z-index: 9999;
+    }
+
+    footer {
+      background: #071b45;
+      color: white;
+      text-align: center;
+      padding: 28px 16px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .showroom-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features,
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .brands {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .features,
+      .product-grid,
+      .brands {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .hero-logo-card {
+        padding: 16px;
+      }
+
+      .product-img {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">CLASSIC <span>PAINTS</span></div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#products">Paint Range</a>
+          <a href="#brands">Brands</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Premium Paints • Beautiful Spaces</span>
+          <h1>Bring Colour, Protection & Style Into Every Space.</h1>
+          <p>
+            Classic Paints supplies trusted paint solutions for homes, offices, shops,
+            contractors and property projects. From interior finishes to exterior wall coatings,
+            roof protection, primers, wood finishes and long-lasting colours, we help customers
+            choose paint that looks good and performs well.
+          </p>
+
+          <div class="buttons">
+            <a class="btn btn-primary" href="https://wa.me/263772381391" target="_blank">WhatsApp 0772 381 391</a>
+            <a class="btn btn-secondary" href="https://wa.me/263773448652" target="_blank">WhatsApp 0773 448 652</a>
+          </div>
+        </div>
+
+        <div class="hero-logo-card">
+          <img src="1000038048.png" alt="Classic Paints poster logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="colour-strip">
+    <div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Paint That Does More Than Cover Walls</h2>
+        <p>
+          The right paint changes the feeling of a room, protects surfaces from weather,
+          improves property value and gives every space a cleaner, more professional finish.
+        </p>
+      </div>
+
+      <div class="features">
+        <div class="feature">
+          <h3>Premium Quality</h3>
+          <p>Paint options selected for strong coverage, smooth application and dependable finishes.</p>
+        </div>
+
+        <div class="feature">
+          <h3>Beautiful Colours</h3>
+          <p>Bright, warm, soft and bold tones for homes, shops, offices and feature walls.</p>
+        </div>
+
+        <div class="feature">
+          <h3>Long Lasting Finish</h3>
+          <p>Products suited for daily wear, sunlight, rain, moisture and changing weather.</p>
+        </div>
+
+        <div class="feature">
+          <h3>Helpful Guidance</h3>
+          <p>Customers get support choosing the right paint for walls, roofs, wood, metal and ceilings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section products" id="products">
+    <div class="container">
+      <div class="section-title">
+        <h2>Paint Range In Stock</h2>
+        <p>
+          Explore the range of paints and coatings available at Classic Paints, including
+          trusted brands for interior, exterior, roof, wood, metal and ceiling applications.
+        </p>
+      </div>
+
+      <div class="product-grid">
+
+        <div class="product-card">
+          <div class="product-img"><img src="1000038033.jpg" alt="Dulux Pearlglo"></div>
+          <div class="product-info">
+            <span class="tag">Trims & More</span>
+            <h3>Dulux Pearlglo</h3>
+            <p>A smooth water-based finish suitable for trims and detailed surfaces where a clean, elegant result matters.</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img"><img src="1000038034.jpg" alt="Splash Rain Proof Roof Seal"></div>
+          <div class="product-info">
+            <span class="tag">Roof Protection</span>
+            <h3>Splash Rain-Proof Roof Seal</h3>
+            <p>Designed to help protect roofing surfaces against water seepage and harsh weather exposure.</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img"><img src="1000038035.jpg" alt="Splash Universal Undercoat"></div>
+          <div class="product-info">
+            <span class="tag">Undercoat</span>
+            <h3>Splash Universal Undercoat</h3>
+            <p>Prepared for primed metal, wood and plaster surfaces, helping paint bond better and finish smoother.</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img"><img src="1000038036.jpg" alt="Plascon Micatex"></div>
+          <div class="product-info">
+            <span class="tag">Exterior</span>
+            <h3>Plascon Micatex</h3>
+            <p>Exterior coating for walls where weather protection and a lasting outdoor finish are important.</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img"><img src="1000038037.jpg" alt="Berger Non Drip Gloss"></div>
+          <div class="product-info">
+            <span class="tag">Wood & Metal</span>
+            <h3>Berger Non Drip Gloss</h3>
+            <p>Gloss finish for interior and exterior wood and metal surfaces, available in rich colour tones.</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img"><img src="1000038041.jpg" alt="Bravo Ceiling White"></div>
+          <div class="product-info">
+            <span class="tag">Ceilings</span>
+            <h3>Bravo Ceiling White</h3>
+            <p>Ceiling paint for gypsum, cement and concrete ceilings with a clean white finish.</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img"><img src="1000038042.jpg" alt="Bravo Advanced Exterior Emulsion"></div>
+          <div class="product-info">
+            <span class="tag">Weather Proof</span>
+            <h3>Bravo Advanced Exterior Emulsion</h3>
+            <p>Exterior emulsion made for outside walls where colour, durability and weather resistance matter.</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img"><img src="1000038043.jpg" alt="Dulux Trade Quick Dry Satinwood"></div>
+          <div class="product-info">
+            <span class="tag">Satin Finish</span>
+            <h3>Dulux Trade Quick Dry Satinwood</h3>
+            <p>Quick-drying satinwood finish for surfaces that need a neat, refined and professional look.</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img"><img src="1000038045.jpg" alt="Dulux Professional Exterior"></div>
+          <div class="product-info">
+            <span class="tag">Professional Exterior</span>
+            <h3>Dulux Professional Exterior</h3>
+            <p>Exterior paint suited for larger buildings, homes and projects that need strong outdoor coverage.</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img"><img src="1000038047.jpg" alt="Splash Smooth Coat"></div>
+          <div class="product-info">
+            <span class="tag">Smooth Coat</span>
+            <h3>Splash Smooth Coat</h3>
+            <p>Interior filler designed to support smooth, even finishes and better wall preparation.</p>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img"><img src="1000038046.jpg" alt="Bravo Pinkwood Primer"></div>
+          <div class="product-info">
+            <span class="tag">Wood Primer</span>
+            <h3>Bravo Pinkwood Primer</h3>
+            <p>A primer for wooden surfaces, helping prepare strong wood finishes before top coating.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="brands">
+    <div class="container">
+      <div class="section-title">
+        <h2>Trusted Paint Brands</h2>
+        <p>
+          Classic Paints brings customers a practical range of well-known paint brands for
+          different surfaces, finishes and project needs.
+        </p>
+      </div>
+
+      <div class="brands">
+        <div class="brand-box">Dulux</div>
+        <div class="brand-box">Splash</div>
+        <div class="brand-box">Plascon</div>
+        <div class="brand-box">Berger</div>
+        <div class="brand-box">Bravo</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section showroom" id="contact">
+    <div class="container">
+      <div class="showroom-grid">
+        <div>
+          <h2>Visit Classic Paints For Colour, Quality & The Right Paint Advice.</h2>
+          <p>
+            Whether you are repainting a room, protecting a roof, refreshing a shop,
+            finishing woodwork or buying paint for a building project, Classic Paints helps
+            you find the right product for the job.
+          </p>
+          <p>
+            Bring your idea, your surface type or your colour direction, and get practical
+            guidance before you buy. Revolutionary stuff, apparently: selling properly.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Contact Classic Paints</h3>
+          <p><strong>Address:</strong> Bobtex Building, 60 Chinhoyi St / Abercorn St, Harare</p>
+          <p><strong>Email:</strong> classicpaints62@gmail.com</p>
+          <p><strong>Phone:</strong> 0772 381 391</p>
+          <p><strong>Phone:</strong> 0773 448 652</p>
+
+          <div class="buttons" style="margin-top: 20px;">
+            <a class="btn btn-primary" href="https://wa.me/263772381391" target="_blank">Chat on WhatsApp</a>
+            <a class="btn btn-secondary" href="mailto:classicpaints62@gmail.com">Send Email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a class="whatsapp-float" href="https://wa.me/263772381391" target="_blank">
+    WhatsApp Us
+  </a>
+
+  <footer>
+    <p>© 2026 Classic Paints. One classic deserves another.</p>
+  </footer>
+
+</body>
+</html>
