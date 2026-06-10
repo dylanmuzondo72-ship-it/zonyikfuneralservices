@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zonyikfuneralservices.com/sitemap.xml
