@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zonyik Funeral Services – In the arms of the Lord I will Rest</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1a4a;
+    --royal: #1a3a8f;
+    --blue: #2255cc;
+    --sky: #4da6ff;
+    --gold: #c9a84c;
+    --light-gold: #e8c96a;
+    --white: #ffffff;
+    --off-white: #f5f7fa;
+    --gray: #e0e5ef;
+    --dark-gray: #555;
+    --text: #1a1a2e;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lato', sans-serif; background: var(--white); color: var(--text); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 999;
+    background: rgba(10,26,74,0.98);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2rem; height: 68px;
+    border-bottom: 2px solid var(--gold);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; }
+  .nav-logo img { height: 48px; object-fit: contain; }
+  .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--white); line-height: 1.2; }
+  .nav-logo-text small { display: block; font-family: 'Dancing Script', cursive; font-size: 0.7rem; color: var(--gold); }
+  .nav-links { display: flex; gap: 1.4rem; list-style: none; }
+  .nav-links a { color: var(--gray); text-decoration: none; font-size: 0.82rem; letter-spacing: 1.5px; text-transform: uppercase; transition: color .2s; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta { background: var(--gold); color: var(--navy); border: none; padding: 9px 20px; border-radius: 4px; font-weight: 700; font-size: 0.82rem; cursor: pointer; letter-spacing: 1px; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--light-gold); }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    padding-top: 68px;
+    background: linear-gradient(135deg, var(--navy) 0%, #0d2260 60%, #0a3080 100%);
+  }
+  .hero-left {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 4rem 3rem 4rem 4rem;
+  }
+  .hero-logo-img { width: 120px; margin-bottom: 1.5rem; }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem); color: var(--white);
+    line-height: 1.1; text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    margin-bottom: 0.5rem;
+  }
+  .hero-title span { color: var(--gold); }
+  .hero-tagline {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(1rem, 2.2vw, 1.4rem); color: var(--sky);
+    margin-bottom: 1.2rem;
+  }
+  .hero-sub { color: rgba(255,255,255,0.82); font-size: 0.98rem; line-height: 1.7; margin-bottom: 2rem; max-width: 480px; }
+  .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+  .btn-primary { background: var(--gold); color: var(--navy); padding: 13px 28px; border-radius: 5px; font-weight: 700; font-size: 0.92rem; text-decoration: none; letter-spacing: 1px; transition: all .2s; border: 2px solid var(--gold); }
+  .btn-primary:hover { background: var(--light-gold); transform: translateY(-2px); }
+  .btn-outline { background: transparent; color: var(--white); padding: 13px 28px; border-radius: 5px; font-weight: 600; font-size: 0.92rem; text-decoration: none; letter-spacing: 1px; border: 2px solid rgba(255,255,255,0.45); transition: all .2s; }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+  .hero-badges span { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.9); padding: 5px 13px; border-radius: 20px; font-size: 0.76rem; letter-spacing: 1px; border: 1px solid rgba(255,255,255,0.2); }
+  .hero-right { position: relative; overflow: hidden; }
+  .hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: top; opacity: 0.9; }
+
+  /* HERO BANNER (weathering) */
+  #banner {
+    background: linear-gradient(135deg, #0d2260, #1a4aaa);
+    display: grid; grid-template-columns: 1fr 1fr;
+    min-height: 340px; overflow: hidden;
+  }
+  .banner-img img { width: 100%; height: 100%; object-fit: cover; }
+  .banner-text { display: flex; flex-direction: column; justify-content: center; padding: 3rem; }
+  .banner-text h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2.4rem); color: var(--white); line-height: 1.2; margin-bottom: 1rem; }
+  .banner-text h2 span { color: var(--gold); }
+  .banner-text p { color: rgba(255,255,255,0.8); font-size: 1rem; }
+
+  /* ABOUT */
+  #about { background: var(--off-white); padding: 90px 2rem; }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1200px; margin: 0 auto; }
+  .about-img-stack { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .about-img-stack img { width: 100%; border-radius: 8px; object-fit: cover; height: 220px; box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+  .about-img-stack img:first-child { grid-column: 1 / -1; height: 260px; }
+  .about-text { padding: 1rem 0; }
+  .section-label { display: inline-block; background: var(--gold); color: var(--navy); font-size: 0.72rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 2px; margin-bottom: 1rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--navy); margin-bottom: 1rem; line-height: 1.2; }
+  .section-title.light { color: var(--white); }
+  .section-sub { color: var(--dark-gray); font-size: 1rem; line-height: 1.7; max-width: 580px; }
+  .section-sub.light { color: rgba(255,255,255,0.78); }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+  .pillar { background: var(--white); padding: 1rem 1.2rem; border-radius: 6px; border-left: 3px solid var(--gold); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+  .pillar h4 { font-size: 0.88rem; color: var(--navy); font-weight: 700; margin-bottom: 3px; }
+  .pillar p { font-size: 0.8rem; color: var(--dark-gray); }
+
+  /* COVERED */
+  #covered { background: var(--white); padding: 0; overflow: hidden; }
+  #covered img { width: 100%; max-height: 480px; object-fit: cover; object-position: top; display: block; }
+
+  /* SERVICES */
+  #services { background: var(--navy); padding: 90px 2rem; }
+  .services-top { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1200px; margin: 0 auto 3rem; }
+  .services-flyer img { width: 100%; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+  .services-header { }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1rem; max-width: 1200px; margin: 0 auto; }
+  .service-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.3rem 1.1rem; text-align: center; transition: all .25s; }
+  .service-card:hover { background: rgba(201,168,76,0.15); border-color: var(--gold); transform: translateY(-4px); }
+  .service-icon { font-size: 1.8rem; margin-bottom: 0.6rem; }
+  .service-card h3 { color: var(--white); font-size: 0.88rem; font-weight: 700; }
+
+  /* PLANS */
+  #plans { background: #ddeeff; padding: 90px 2rem; }
+  .plans-header { text-align: center; margin-bottom: 3rem; }
+  .plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+  .plan-card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); transition: transform .25s, box-shadow .25s; }
+  .plan-card:hover { transform: translateY(-6px); box-shadow: 0 14px 40px rgba(0,0,0,0.18); }
+  .plan-card img { width: 100%; display: block; }
+  .plan-card-info { padding: 1rem 1.4rem 1.4rem; }
+  .plan-card-info h3 { font-family: 'Playfair Display', serif; color: var(--navy); font-size: 1.1rem; margin-bottom: 4px; }
+  .plan-card-info p { font-size: 0.85rem; color: var(--dark-gray); }
+
+  /* CASKETS */
+  #caskets { background: var(--off-white); padding: 90px 2rem; }
+  .caskets-header { text-align: center; margin-bottom: 3rem; }
+  .caskets-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+  .casket-card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 3px 16px rgba(0,0,0,0.09); transition: transform .25s; }
+  .casket-card:hover { transform: translateY(-4px); }
+  .casket-card img { width: 100%; display: block; background: #f8f9fc; }
+  .casket-card.tall img { max-height: 420px; object-fit: contain; padding: 1rem; background: #f8f9fc; }
+  .casket-info { padding: 1.1rem 1.4rem 1.4rem; }
+  .casket-info h3 { font-family: 'Playfair Display', serif; color: var(--navy); font-size: 1.05rem; margin-bottom: 4px; }
+  .casket-info p { font-size: 0.84rem; color: var(--dark-gray); }
+
+  /* PEACE OF MIND */
+  #peace { background: linear-gradient(135deg, #0d2260, var(--navy)); padding: 90px 2rem; }
+  .peace-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1200px; margin: 0 auto; }
+  .peace-img img { width: 100%; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+  .peace-text { }
+  .peace-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2rem; }
+  .peace-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13); border-radius: 10px; padding: 1.5rem; }
+  .peace-card h3 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.05rem; margin-bottom: 0.6rem; }
+  .peace-card p { color: rgba(255,255,255,0.8); font-size: 0.88rem; line-height: 1.6; }
+  .cover-list { margin-top: 0.8rem; list-style: none; display: flex; flex-wrap: wrap; gap: 5px; }
+  .cover-list li { background: rgba(201,168,76,0.18); color: var(--gold); padding: 3px 11px; border-radius: 14px; font-size: 0.76rem; font-weight: 700; }
+
+  /* SENIOR */
+  #senior { background: #f0f4ff; padding: 90px 2rem; }
+  .senior-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1100px; margin: 0 auto; }
+  .senior-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .senior-imgs img { width: 100%; border-radius: 8px; object-fit: cover; height: 260px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+  .senior-text { }
+  .senior-text .big-price { font-size: 3.5rem; font-family: 'Playfair Display', serif; color: var(--royal); display: block; margin: 1rem 0 0.3rem; }
+  .senior-text .big-price small { font-size: 1rem; color: var(--dark-gray); }
+
+  /* ECOSURE */
+  #ecosure { background: var(--white); padding: 90px 2rem; }
+  .eco-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1100px; margin: 0 auto; }
+  .eco-img img { width: 100%; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+  .eco-badge { display: inline-block; background: var(--off-white); border: 2px solid var(--gray); padding: 8px 20px; border-radius: 4px; margin-bottom: 1.5rem; }
+  .eco-badge span { font-size: 1.3rem; font-weight: 900; color: #e35208; }
+  .eco-badge span em { font-style: normal; color: #1a3a8f; }
+  .eco-badge small { display: block; font-size: 0.7rem; letter-spacing: 1.5px; color: #666; }
+  .eco-claims { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 8px; }
+  .eco-claim { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; }
+  .eco-claim::before { content: '✓'; width: 22px; height: 22px; background: var(--blue); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0; }
+
+  /* SCRIPTURE */
+  #scripture { background: var(--off-white); padding: 70px 2rem; }
+  .scripture-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; max-width: 1000px; margin: 0 auto; }
+  .scripture-img img { width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+  .scripture-card { background: var(--white); border-radius: 12px; padding: 2.5rem 2rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); border-top: 4px solid var(--gold); text-align: center; }
+  .scripture-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
+  .scripture-text { font-family: 'Dancing Script', cursive; font-size: clamp(1.15rem, 2.5vw, 1.5rem); color: var(--navy); line-height: 1.6; margin-bottom: 0.8rem; }
+  .scripture-ref { font-size: 0.85rem; color: var(--dark-gray); font-weight: 700; }
+
+  /* CONTACT */
+  #contact { background: var(--navy); padding: 90px 2rem; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 1100px; margin: 0 auto; align-items: start; }
+  .contact-info h2 { font-family: 'Playfair Display', serif; color: var(--white); font-size: 2rem; margin-bottom: 1.5rem; }
+  .contact-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 1.4rem; }
+  .contact-icon { width: 42px; height: 42px; background: rgba(201,168,76,0.2); border: 1px solid var(--gold); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+  .contact-item h4 { color: var(--gold); font-size: 0.76rem; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 2px; }
+  .contact-item p, .contact-item a { color: rgba(255,255,255,0.85); font-size: 0.95rem; text-decoration: none; line-height: 1.5; }
+  .contact-item a:hover { color: var(--gold); }
+  .contact-buttons { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+  .cta-wa { background: #25D366; color: white; padding: 14px 24px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 1rem; display: flex; align-items: center; gap: 10px; justify-content: center; transition: opacity .2s; }
+  .cta-wa:hover { opacity: 0.9; }
+  .cta-fb { background: #1877F2; color: white; padding: 14px 24px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 1rem; display: flex; align-items: center; gap: 10px; justify-content: center; transition: opacity .2s; }
+  .cta-fb:hover { opacity: 0.9; }
+  .cta-maps { background: var(--gold); color: var(--navy); padding: 14px 24px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 1rem; display: flex; align-items: center; gap: 10px; justify-content: center; transition: opacity .2s; }
+  .cta-maps:hover { opacity: 0.9; }
+  .map-embed { border-radius: 10px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.3); height: 380px; }
+  .map-embed iframe { width: 100%; height: 100%; border: none; }
+
+  /* FLOATING BUTTONS */
+  .float-bar { position: fixed; bottom: 24px; right: 24px; z-index: 998; display: flex; flex-direction: column; gap: 10px; }
+  .float-btn { width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.4rem; box-shadow: 0 4px 16px rgba(0,0,0,0.3); transition: transform .2s; }
+  .float-btn:hover { transform: scale(1.1); }
+  .float-wa { background: #25D366; }
+  .float-fb { background: #1877F2; color: white; font-weight: 900; font-size: 1.1rem; }
+  .float-ph { background: var(--gold); color: var(--navy); }
+
+  /* FOOTER */
+  footer { background: #050d24; color: rgba(255,255,255,0.5); text-align: center; padding: 2rem; font-size: 0.82rem; border-top: 1px solid rgba(201,168,76,0.3); }
+  footer a { color: var(--gold); text-decoration: none; }
+  .footer-logo { font-family: 'Dancing Script', cursive; font-size: 1.1rem; color: var(--gold); margin-bottom: 0.5rem; }
+
+  /* REVEAL ANIMATION */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE – MOBILE FIRST ── */
+  @media (max-width: 900px) {
+
+    /* NAV */
+    nav { padding: 0 1rem; height: 60px; }
+    .nav-links { display: none; }
+    .nav-logo img { height: 38px; }
+    .nav-logo-text { font-size: 0.78rem; }
+    .nav-cta { padding: 8px 14px; font-size: 0.76rem; }
+
+    /* HERO – stack, image full width below text */
+    #hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      padding-top: 60px;
+    }
+    .hero-left {
+      padding: 2.5rem 1.2rem 1.5rem;
+      text-align: center;
+      align-items: center;
+    }
+    .hero-logo-img { width: 90px; margin-bottom: 1rem; }
+    .hero-title { font-size: 2.2rem; }
+    .hero-sub { font-size: 0.92rem; max-width: 100%; }
+    .hero-buttons { justify-content: center; }
+    .hero-badges { justify-content: center; }
+    .hero-right { height: 260px; width: 100%; }
+    .hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+
+    /* BANNER */
+    #banner { grid-template-columns: 1fr; min-height: auto; }
+    .banner-img { height: 220px; }
+    .banner-img img { width: 100%; height: 100%; object-fit: cover; }
+    .banner-text { padding: 1.8rem 1.2rem; text-align: center; }
+    .banner-text h2 { font-size: 1.5rem; }
+
+    /* ABOUT */
+    #about { padding: 50px 1.2rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .about-img-stack { grid-template-columns: 1fr; }
+    .about-img-stack img { height: auto !important; max-height: 280px; object-fit: cover; grid-column: auto !important; }
+    .pillars { grid-template-columns: 1fr 1fr; }
+
+    /* COVERED */
+    #covered img { max-height: none; width: 100%; height: auto; object-fit: contain; }
+
+    /* SERVICES */
+    #services { padding: 50px 1.2rem; }
+    .services-top { grid-template-columns: 1fr; gap: 1.5rem; }
+    .services-flyer img { width: 100%; border-radius: 8px; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .service-card { padding: 1rem 0.8rem; }
+
+    /* PLANS */
+    #plans { padding: 50px 1.2rem; }
+    .plans-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+    .plan-card img { width: 100%; height: auto; object-fit: contain; }
+
+    /* CASKETS */
+    #caskets { padding: 50px 1.2rem; }
+    .caskets-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+    .casket-card img { width: 100%; height: auto; }
+
+    /* PEACE OF MIND */
+    #peace { padding: 50px 1.2rem; }
+    .peace-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .peace-img img { width: 100%; height: auto; }
+    .peace-cards { grid-template-columns: 1fr; gap: 1rem; }
+
+    /* SENIOR */
+    #senior { padding: 50px 1.2rem; }
+    .senior-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .senior-imgs { grid-template-columns: 1fr; gap: 1rem; }
+    .senior-imgs img { width: 100%; height: auto !important; object-fit: contain; }
+
+    /* ECOSURE */
+    #ecosure { padding: 50px 1.2rem; }
+    .eco-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .eco-img img { width: 100%; height: auto; }
+
+    /* SCRIPTURE */
+    #scripture { padding: 50px 1.2rem; }
+    .scripture-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+    .scripture-img img { width: 100%; height: auto; }
+
+    /* CONTACT */
+    #contact { padding: 50px 1.2rem; }
+    .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .map-embed { height: 280px; }
+    .contact-info h2 { font-size: 1.6rem; }
+
+    /* GLOBAL SECTION SPACING */
+    section { padding: 50px 1.2rem; }
+
+    /* ALL IMAGES fill width properly */
+    img { max-width: 100%; height: auto; }
+  }
+
+  /* Extra small phones */
+  @media (max-width: 480px) {
+    .hero-title { font-size: 1.9rem; }
+    .pillars { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .btn-primary, .btn-outline { padding: 11px 20px; font-size: 0.85rem; }
+    .nav-logo-text { display: none; }
+  }
+
+/* ===== FINAL COMPLETE UPDATE ===== */
+html, body { max-width: 100%; overflow-x: hidden !important; }
+img { max-width: 100%; }
+section, #banner, #covered { scroll-margin-top: 82px; }
+.nav-actions { display: flex; gap: 10px; align-items: center; }
+.register-top { background: #ffffff !important; color: var(--navy) !important; }
+.nav-logo img { height: 48px !important; width: auto !important; object-fit: contain !important; display: block !important; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.22)); }
+.hero-logo-img { width: clamp(150px, 20vw, 230px) !important; height: auto !important; object-fit: contain !important; display: block !important; margin-left: auto; margin-right: auto; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.25)); }
+#hero, #banner, .about-grid, .services-top, .peace-grid, .senior-grid, .eco-grid, .scripture-inner, .contact-grid { display: grid !important; grid-template-columns: 1fr !important; max-width: 1100px; margin-left: auto; margin-right: auto; }
+#hero { max-width: none !important; min-height: auto !important; padding-top: 68px !important; background: linear-gradient(135deg, var(--navy) 0%, #0d2260 65%, #0a3080 100%) !important; }
+.hero-left { text-align: center !important; align-items: center !important; padding: 4rem 2rem 2rem !important; max-width: 900px; margin: 0 auto; }
+.hero-sub { margin-left: auto; margin-right: auto; }
+.hero-buttons, .hero-badges { justify-content: center !important; }
+.hero-right { width: min(100%, 900px) !important; height: auto !important; min-height: 0 !important; margin: 0 auto 3rem !important; overflow: visible !important; border-radius: 14px; background: rgba(255,255,255,0.06); }
+.hero-right img { width: 100% !important; height: auto !important; object-fit: contain !important; object-position: center !important; display: block !important; opacity: 1 !important; border-radius: 14px; }
+#banner { max-width: none !important; background: linear-gradient(135deg, #0d2260, #1a4aaa) !important; padding: 3rem 2rem !important; min-height: auto !important; }
+.banner-img, .banner-text { max-width: 900px; width: 100%; margin-left: auto; margin-right: auto; }
+.banner-img { height: auto !important; background: #ffffff; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 28px rgba(0,0,0,0.18); }
+.banner-img img { width: 100% !important; height: auto !important; object-fit: contain !important; display: block !important; }
+.banner-text { text-align: center; padding: 2.2rem 1rem 0 !important; }
+.about-img-stack, .senior-imgs { display: grid !important; grid-template-columns: 1fr !important; gap: 1.2rem !important; max-width: 760px; margin-left: auto; margin-right: auto; }
+.about-img-stack img, .senior-imgs img, #covered img, .plan-card img, .casket-card img, .services-flyer img, .peace-img img, .eco-img img, .scripture-img img { width: 100% !important; height: auto !important; max-height: none !important; object-fit: contain !important; object-position: center !important; display: block !important; background: #ffffff; }
+#covered { background: #ffffff !important; }
+#covered img { max-width: 900px; margin-left: auto; margin-right: auto; }
+.about-text, .services-header, .peace-text, .senior-text, .eco-text, .scripture-card, .contact-info { max-width: 850px; margin-left: auto; margin-right: auto; text-align: center; }
+.eco-img { max-width: 900px; margin-left: auto; margin-right: auto; }
+.eco-img img { border-radius: 14px !important; box-shadow: 0 10px 28px rgba(0,0,0,0.12) !important; }
+.caskets-grid { display: grid !important; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important; gap: 1.5rem !important; }
+.casket-card img { aspect-ratio: 16 / 10; object-fit: contain !important; padding: 0.4rem; background: #ffffff !important; }
+.mini-wa { display: inline-block; margin-top: 0.8rem; color: var(--navy); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--gold); }
+.no-cover-section { background: linear-gradient(135deg, var(--navy), #102c7a); padding: 90px 2rem; text-align: center; }
+.no-cover-inner { max-width: 920px; margin: 0 auto; }
+.no-cover-list { margin: 1.8rem auto 2rem; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.no-cover-list span { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.18); color: #ffffff; padding: 9px 14px; border-radius: 999px; font-weight: 700; font-size: 0.86rem; }
+.section-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.register-section { background: #f5f7fa; padding: 90px 2rem; }
+.register-header { text-align: center; margin-bottom: 2.5rem; }
+.membership-form { max-width: 1000px; margin: 0 auto; background: #ffffff; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 35px rgba(0,0,0,0.08); }
+.membership-form h3 { font-family: 'Playfair Display', serif; color: var(--navy); margin: 1rem 0; font-size: 1.35rem; }
+.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.membership-form label { display: flex; flex-direction: column; gap: 6px; color: var(--navy); font-weight: 700; font-size: 0.88rem; }
+.membership-form input, .membership-form select { width: 100%; padding: 12px 13px; border: 1px solid #d8deea; border-radius: 8px; font: inherit; background: #ffffff; color: var(--text); }
+.form-help { color: var(--dark-gray); margin-bottom: 1rem; }
+.dependants-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr 1fr; gap: 0.7rem; }
+.confirm-row { flex-direction: row !important; align-items: flex-start; margin: 1.5rem 0; color: var(--text) !important; }
+.confirm-row input { width: auto; margin-top: 4px; }
+.form-submit { border: none; cursor: pointer; }
+.bottom-register-cta { background: #050d24; color: #ffffff; text-align: center; padding: 70px 2rem; }
+.bottom-register-inner { max-width: 850px; margin: 0 auto; }
+.bottom-register-cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 4vw, 2.6rem); margin-bottom: 0.7rem; }
+.bottom-register-cta p { color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; }
+.float-bar { right: 18px !important; bottom: 18px !important; gap: 10px !important; }
+.float-btn { width: 52px !important; height: 52px !important; font-size: 1.2rem !important; }
+@media (max-width: 900px) { nav { height: 60px !important; padding: 0 0.8rem !important; } .nav-logo img { height: 38px !important; } .nav-actions { gap: 6px; } .nav-cta { padding: 8px 10px !important; font-size: 0.72rem !important; } #hero { padding-top: 60px !important; } .hero-left { padding: 2.4rem 1.2rem 1.5rem !important; } .hero-logo-img { width: 140px !important; } #banner { padding: 2rem 1.2rem !important; } .plans-grid, .caskets-grid, .services-grid, .pillars, .peace-cards, .form-grid { grid-template-columns: 1fr !important; } .dependants-grid { grid-template-columns: 1fr !important; gap: 0.6rem; padding-bottom: 1rem; border-bottom: 1px solid #e3e8f2; margin-bottom: 1rem; } .membership-form { padding: 1.2rem; } .float-bar { right: 12px !important; bottom: 14px !important; gap: 8px !important; } .float-btn { width: 46px !important; height: 46px !important; font-size: 1.1rem !important; } }
+@media (max-width: 520px) { .nav-logo-text { display: none !important; } .register-top { display: inline-flex; } .hero-title { font-size: 1.95rem !important; } }
+
+
+/* ===== NAV LOGO FLOATING FIX ===== */
+.nav-logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.nav-logo-img,
+.nav-logo img {
+  height: 54px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.28)) !important;
+}
+
+@media (max-width: 900px) {
+  .nav-logo-img,
+  .nav-logo img {
+    height: 44px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav-logo-img,
+  .nav-logo img {
+    height: 42px !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <img src="images/zonyik-logo-new.png" alt="Zonyik Logo" class="nav-logo-img">
+    <div class="nav-logo-text">ZONYIK FUNERAL SERVICES <small>"...In the arms of the Lord I will Rest"</small></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#plans">Plans</a></li>
+    <li><a href="#caskets">Caskets</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions"><a href="#register" class="nav-cta register-top">Register Now</a><a href="https://wa.me/263773389746" target="_blank" class="nav-cta">💬 WhatsApp Us</a></div>
+</nav>
+
+<!-- FLOATING BUTTONS -->
+<div class="float-bar">
+  <a href="https://wa.me/263773389746" class="float-btn float-wa" title="WhatsApp" target="_blank">💬</a>
+  <a href="https://www.facebook.com/ZONYIKFUNERAL?mibextid=ZbWKwL" class="float-btn float-fb" title="Facebook" target="_blank">f</a>
+  <a href="tel:+263773389746" class="float-btn float-ph" title="Call">📞</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left reveal">
+    <img src="images/zonyik-logo-new.png" alt="Zonyik Logo" class="hero-logo-img">
+    <h1 class="hero-title">ZONYIK<br><span>Funeral Services</span></h1>
+    <p class="hero-tagline">"...In the arms of the Lord I will Rest"</p>
+    <p class="hero-sub">Compassionate, affordable and dignified funeral services in Harare, Zimbabwe. We are <strong>One Call Away</strong> — always here for your family.</p>
+    <div class="hero-buttons">
+      <a href="#register" class="btn-primary">Register Now</a>
+      <a href="https://wa.me/263773389746" target="_blank" class="btn-outline">💬 WhatsApp Us</a>
+      <a href="#plans" class="btn-outline">View Our Plans</a>
+    </div>
+    <div class="hero-badges">
+      <span>✅ EcoSure Registered Partner</span>
+      <span>✅ Underwritten by EconetLife</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <!-- Image 9: Lady on phone "One Call Away" -->
+    <img src="images/IMG-20260422-WA0015.jpg" alt="One Call Away">
+  </div>
+</section>
+
+<!-- WEATHERING BANNER -->
+<div id="banner">
+  <div class="banner-img">
+    <!-- Image 19: Umbrella "Weathering Life's Uncertainties" -->
+    <img src="images/IMG-20260422-WA0005.jpg" alt="Weathering Life's Uncertainties Together">
+  </div>
+  <div class="banner-text reveal">
+    <h2>"Weathering Life's<br><span>Uncertainties</span><br>Together."</h2>
+    <p>We are your shoulder to lean on. Affordable | Reliable | Dependable</p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid container">
+    <div class="about-img-stack reveal">
+      <!-- Image 1: Elderly man "May we find comfort" -->
+      <img src="images/IMG-20260422-WA0044.jpg" alt="May we find comfort in the treasured memories">
+      <!-- Image 18: "Ensure You and your loved ones are Covered" -->
+      <img src="images/IMG-20260422-WA0041.jpg" alt="Ensure you and your loved ones are covered">
+      <!-- Image 9: One Call Away -->
+      <img src="images/IMG-20260422-WA0015.jpg" alt="One Call Away" style="display:none;">
+    </div>
+    <div class="about-text reveal">
+      <span class="section-label">Who We Are</span>
+      <h2 class="section-title">One Call Away</h2>
+      <p class="section-sub">
+        Zonyik Funeral Services is based at 154 Mbuya Nehanda Street, Harare, Zimbabwe. We provide compassionate, affordable and dignified funeral services to families across Zimbabwe — because your loved ones deserve the very best farewell.
+      </p>
+      <p class="section-sub" style="margin-top:1rem;">
+        "May we find comfort in the treasured memories of those no longer with us."
+      </p>
+      <p class="section-sub" style="margin-top:0.8rem;">
+        We are a Registered EcoSure Funeral Service Partner, underwritten by Econet Life Private Limited, giving you peace of mind with every plan.
+      </p>
+      <div class="pillars">
+        <div class="pillar"><h4>Affordable</h4><p>Plans from US$1/month per head</p></div>
+        <div class="pillar"><h4>Reliable</h4><p>24/7 availability when you need us most</p></div>
+        <div class="pillar"><h4>Dependable</h4><p>A shoulder to lean on in difficult times</p></div>
+        <div class="pillar"><h4>Compassionate</h4><p>Every family treated with dignity and care</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COVERED FULL-WIDTH -->
+<div id="covered">
+  <!-- Image 18: "Ensure You and your loved ones are Covered" -->
+  <img src="images/IMG-20260422-WA0041.jpg" alt="Ensure You and your loved ones are Covered – Affordable, Reliable, Dependable">
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-top">
+    <div class="services-flyer reveal">
+      <!-- Image 10: Services offered flyer -->
+      <img src="images/IMG-20260422-WA0012.jpg" alt="Services Offered by Zonyik Funeral Services">
+    </div>
+    <div class="services-header reveal">
+      <span class="section-label" style="background:var(--gold);">What We Offer</span>
+      <h2 class="section-title light">Our Services</h2>
+      <p class="section-sub light">Your shoulder to lean on — comprehensive funeral services all under one roof. Funeral policies from US$1.00.</p>
+      <div class="services-grid" style="margin-top:2rem;">
+        <div class="service-card"><div class="service-icon">🏠</div><h3>Home Removals</h3></div>
+        <div class="service-card"><div class="service-icon">🏥</div><h3>Hospital Removals</h3></div>
+        <div class="service-card"><div class="service-icon">⚰️</div><h3>Coffins & Caskets</h3></div>
+        <div class="service-card"><div class="service-icon">🕊️</div><h3>Mortuary & Chapel</h3></div>
+        <div class="service-card"><div class="service-icon">🪦</div><h3>Grave Equipment</h3></div>
+        <div class="service-card"><div class="service-icon">🚐</div><h3>Hearse & Bus</h3></div>
+        <div class="service-card"><div class="service-icon">🪨</div><h3>Tombstones</h3></div>
+        <div class="service-card"><div class="service-icon">⛺</div><h3>Toilets & Tents</h3></div>
+        <div class="service-card"><div class="service-icon">💐</div><h3>Flowers & Décor</h3></div>
+        <div class="service-card"><div class="service-icon">📋</div><h3>EcoSure Claims</h3></div>
+        <div class="service-card"><div class="service-icon">🎥</div><h3>Live Streaming</h3></div>
+        <div class="service-card"><div class="service-icon">🧑‍💼</div><h3>Funeral Directing</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JUNGLE FAMILY PLANS -->
+<section id="plans">
+  <div class="container">
+    <div class="plans-header reveal">
+      <span class="section-label">Jungle Family Plans</span>
+      <h2 class="section-title">Affordable Family Funeral Policies</h2>
+      <p class="section-sub" style="margin:0 auto 0.5rem;">Covering You, Your Spouse, Kids, Inlaws and Extended Family.<br><strong>Protect your Clan Today!</strong></p>
+      <p style="font-size:0.8rem;color:#666;margin-top:0.5rem;">Underwritten by Econet Life Private Limited &nbsp;|&nbsp; 3 Months Waiting Period applies</p>
+    </div>
+    <div class="plans-grid">
+
+      <!-- Image 15: Monkey Package -->
+      <div class="plan-card reveal">
+        <img src="images/IMG-20260422-WA0008.jpg" alt="Monkey Package – US$1.00 per head">
+        <div class="plan-card-info">
+          <h3>🐒 Monkey Package – US$1.00/head</h3>
+          <p>Flat Casket · Body Removal · Mortuary | Chapel · Hearse 200kms · Grave Equipment · Age Limit 70 years</p>
+        </div>
+      </div>
+
+      <!-- Image 7: Zebra Package -->
+      <div class="plan-card reveal">
+        <img src="images/zebra-package-new.jpg" alt="Zebra Package – US$2.00 per head">
+        <div class="plan-card-info">
+          <h3>🦓 Zebra Package – US$2.00/head</h3>
+          <p>2-Tier Casket · Body Removal · Mortuary | Chapel · Hearse · Grave Equipment · US$10 Airtime · US$250 Cash Back</p>
+        </div>
+      </div>
+
+      <!-- Image 20: Lion Package -->
+      <div class="plan-card reveal">
+        <img src="images/IMG-20260422-WA0002.jpg" alt="Lion Package – US$3.00 per head">
+        <div class="plan-card-info">
+          <h3>🦁 Lion Package – US$3.00/head</h3>
+          <p>Dome Casket · Body Removal · Mortuary | Chapel · Hearse · Grave Equipment · US$10 Airtime · US$500 Cash Back</p>
+        </div>
+      </div>
+
+      <!-- Image 14: Giraffe Package -->
+      <div class="plan-card reveal">
+        <img src="images/IMG-20260422-WA0007.jpg" alt="Giraffe Package – US$3.00 per head">
+        <div class="plan-card-info">
+          <h3>🦒 Giraffe Package – US$3.00/head</h3>
+          <p>Dome Casket · Body Removal · Mortuary | Chapel · Hearse · Grave Equipment · Age Limit 80 years · US$200 Cash Back</p>
+        </div>
+      </div>
+
+      <!-- Image 6: Cheetah Package -->
+      <div class="plan-card reveal">
+        <img src="images/cheetah-package-new.jpg" alt="Cheetah Package – US$5.00 per head">
+        <div class="plan-card-info">
+          <h3>🐆 Cheetah Package – US$5.00/head</h3>
+          <p>Dome Casket · Body Removal · Mortuary | Chapel · Hearse | Bus for Mourners · Grave Equipment · US$20 Airtime · US$500 Cash Back</p>
+        </div>
+      </div>
+
+      <!-- Call to action card -->
+      <div class="plan-card reveal" style="background:linear-gradient(135deg,var(--navy),#1a3a8f);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:2.5rem;text-align:center;min-height:300px;">
+        <div style="font-size:2.5rem;margin-bottom:1rem;">📞</div>
+        <h3 style="font-family:'Playfair Display',serif;color:var(--gold);font-size:1.3rem;margin-bottom:0.8rem;">Enrol Today</h3>
+        <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin-bottom:1.5rem;">Call or WhatsApp us to sign up for any plan</p>
+        <a href="https://wa.me/263773389746?text=I%20want%20to%20enrol%20in%20a%20Jungle%20Family%20Plan" target="_blank" class="btn-primary" style="font-size:0.88rem;">💬 WhatsApp to Enrol</a>
+        <p style="color:var(--gold);font-size:0.85rem;margin-top:1rem;">0773 389 746 | 0719 389 746</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CASKETS -->
+<section id="caskets">
+  <div class="container">
+    <div class="caskets-header reveal">
+      <span class="section-label">The Coffin Shop</span>
+      <h2 class="section-title">Our Casket Range</h2>
+      <p class="section-sub" style="margin:0 auto;">Quality caskets and coffins to honour your loved one with dignity. Contact us to confirm availability and pricing.</p>
+    </div>
+    <div class="caskets-grid">
+
+      <div class="casket-card reveal">
+        <img src="images/dome-boston-casket.jpg" alt="Dome Boston Casket">
+        <div class="casket-info">
+          <h3>Dome Boston Casket</h3>
+          <p>Premium white domed casket with gold-tone handles.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%20Dome%20Boston%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+      <div class="casket-card reveal">
+        <img src="images/dome-windsor-casket.jpg" alt="Dome Windsor Casket">
+        <div class="casket-info">
+          <h3>Dome Windsor Casket</h3>
+          <p>Elegant wood-finish Windsor dome casket.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%20Dome%20Windsor%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+      <div class="casket-card reveal">
+        <img src="images/flat-casket.jpg" alt="Flat Casket">
+        <div class="casket-info">
+          <h3>Flat Casket</h3>
+          <p>Classic flat casket with rich wood finish.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%20Flat%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+      <div class="casket-card reveal">
+        <img src="images/three-tier-boston-casket.jpg" alt="3 Tier Boston Casket">
+        <div class="casket-info">
+          <h3>3 Tier Boston Casket</h3>
+          <p>Three-tier Boston design with gold-tone fittings.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%203%20Tier%20Boston%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+      <div class="casket-card reveal">
+        <img src="images/three-tier-windsor-casket.jpg" alt="3 Tier Windsor Casket">
+        <div class="casket-info">
+          <h3>3 Tier Windsor Casket</h3>
+          <p>Premium three-tier Windsor casket in polished wood.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%203%20Tier%20Windsor%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+      <div class="casket-card reveal">
+        <img src="images/import-casket.jpg" alt="Import Casket">
+        <div class="casket-info">
+          <h3>Import Casket</h3>
+          <p>Premium import casket with detailed gold-tone hardware.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%20Import%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+      <div class="casket-card reveal">
+        <img src="images/three-tier-windson-casket.jpg" alt="3 Tier Windson Casket">
+        <div class="casket-info">
+          <h3>3 Tier Windson Casket</h3>
+          <p>High-end three-tier Windson casket design.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%203%20Tier%20Windson%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+      <div class="casket-card reveal">
+        <img src="images/three-tier-windsor-open-casket.jpg" alt="3 Tier Windsor Casket - Open View">
+        <div class="casket-info">
+          <h3>3 Tier Windsor Casket - Open View</h3>
+          <p>Three-tier Windsor casket with open interior view.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%203%20Tier%20Windsor%20Casket%20-%20Open%20View" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+      <div class="casket-card reveal">
+        <img src="images/dome-wrap-around-casket.jpg" alt="Dome Wrap Around Casket">
+        <div class="casket-info">
+          <h3>Dome Wrap Around Casket</h3>
+          <p>White dome wrap-around casket with gold-tone detailing.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%20Dome%20Wrap%20Around%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PEACE OF MIND -->
+<section id="peace">
+  <div class="peace-grid">
+    <div class="peace-img reveal">
+      <!-- Image 12: "Need Peace of Mind" -->
+      <img src="images/IMG-20260422-WA0010.jpg" alt="Need Peace of Mind – Zonyik Funeral Services">
+    </div>
+    <div class="peace-text reveal">
+      <span class="section-label" style="background:var(--gold);color:var(--navy);">Peace of Mind</span>
+      <h2 class="section-title light">Need Peace of Mind?</h2>
+      <p class="section-sub light">
+        Secure peace of mind with our affordable funeral policies, covering you, Your <strong>Spouse</strong>, <strong>Kids</strong>, <strong>Inlaws</strong>, and <strong>Extended family</strong>. Secure your loved ones' future with our flexible plans and compassionate service.
+      </p>
+      <p style="color:var(--gold);font-weight:700;font-size:1.05rem;margin-top:1.2rem;">Protect your Clan Today!</p>
+      <div class="peace-cards">
+        <div class="peace-card">
+          <h3>Family Coverage</h3>
+          <p>One policy covers your entire household. From as little as US$1 per head per month.</p>
+          <ul class="cover-list">
+            <li>You</li><li>Spouse</li><li>Kids</li><li>Inlaws</li><li>Extended Family</li>
+          </ul>
+        </div>
+        <div class="peace-card">
+          <h3>Senior Citizens</h3>
+          <p>Ensure parents and elders receive the dignified farewell they deserve. Coverage for loved ones below 80 years.</p>
+          <span style="font-size:2.5rem;font-family:'Playfair Display',serif;color:var(--gold);display:block;margin-top:0.8rem;">$3 <small style="font-size:1rem;color:rgba(255,255,255,0.7)">/ month</small></span>
+        </div>
+      </div>
+      <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="https://wa.me/263773389746?text=I%20want%20to%20enquire%20about%20funeral%20plans" target="_blank" class="btn-primary">Enquire on WhatsApp</a>
+        <a href="tel:+263773389746" class="btn-outline">📞 0773 389 746</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SENIOR CITIZENS -->
+<section id="senior">
+  <div class="senior-grid container">
+    <div class="senior-text reveal">
+      <span class="section-label">Senior Citizens Plan</span>
+      <h2 class="section-title">Secure Their Legacy</h2>
+      <p class="section-sub">
+        Because they deserve the best. Secure a dignified send-off for your loved one below <strong>80 years</strong> and find peace of mind today. Ensure your Parents and Elders receive the dignified farewell they Deserve.
+      </p>
+      <span class="senior-text big-price">$3 <small>a month</small></span>
+      <p class="section-sub" style="margin-top:0.5rem;">Underwritten by Econet Life</p>
+      <div style="margin-top:1.8rem;">
+        <a href="https://wa.me/263773389746?text=I%20want%20to%20enquire%20about%20the%20Senior%20Citizens%20Plan" target="_blank" class="btn-primary">💬 Enquire Now</a>
+      </div>
+    </div>
+    <div class="senior-imgs reveal">
+      <!-- Image 13: Senior Citizens "Secure their legacy" phone -->
+      <img src="images/IMG-20260422-WA0009.jpg" alt="Secure their legacy – Senior Citizens Package from $3 a month">
+      <!-- Image 17: Elder man "Secure their legacy" -->
+      <img src="images/IMG-20260422-WA0021.jpg" alt="Ensure your Parents and Elders receive the dignified farewell they Deserve">
+    </div>
+  </div>
+</section>
+
+<!-- ECOSURE -->
+<section id="ecosure">
+  <div class="eco-grid container">
+    <div class="eco-text reveal">
+      <div class="eco-badge">
+        <span>Eco<em>Sure</em></span>
+        <small>Enquiries & Claims Submission Centre</small>
+      </div>
+      <h2 class="section-title">EcoSure Approved Partner</h2>
+      <p class="section-sub">
+        Zonyik Funeral Services is an approved EcoSure Funeral Service Partner, making it easier for your family to claim. We handle submissions on your behalf — one less burden in a difficult time.
+      </p>
+      <div class="eco-claims">
+        <div class="eco-claim">Submit EcoSure claims on your behalf</div>
+        <div class="eco-claim">Registered & approved funeral partner</div>
+        <div class="eco-claim">Underwritten by Econet Life Private Limited</div>
+        <div class="eco-claim">"Mumaoko emusiki Ndozorora" – In the arms of the Lord I will Rest</div>
+      </div>
+    </div>
+    <div class="eco-img reveal">
+      <!-- Image 5: EcoSure hearse -->
+      <img src="images/ecosure-claims.jpg" alt="EcoSure claims submission with Zonyik Funeral Services">
+    </div>
+  </div>
+</section>
+
+<!-- SCRIPTURE -->
+<section id="scripture">
+  <div class="scripture-inner container">
+    <div class="scripture-img reveal">
+      <!-- Image 16: Heart of Wisdom clock -->
+      <img src="images/IMG-20260422-WA0006.jpg" alt="Heart of Wisdom – Psalms 90 vs 12">
+    </div>
+    <div class="scripture-card reveal">
+      <div class="scripture-icon">📖</div>
+      <p style="font-size:0.85rem;color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:0.8rem;">Heart of Wisdom</p>
+      <p class="scripture-text">
+        "So teach us to number our days,<br>that we may apply our hearts unto wisdom"
+      </p>
+      <p class="scripture-ref">— Psalms 90 vs 12</p>
+      <p style="margin-top:1.2rem;font-size:0.88rem;color:#777;font-style:italic;">"May we find comfort in the treasured memories of those no longer with us"</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- NO COVER SUPPORT -->
+<section id="no-cover" class="no-cover-section">
+  <div class="container no-cover-inner reveal">
+    <span class="section-label">Immediate Support</span>
+    <h2 class="section-title light">No Cover? We Can Still Help.</h2>
+    <p class="section-sub light">
+      Even if your loved one was not registered under an existing funeral cover or policy, Zonyik Funeral Services can still assist your family with dignified funeral arrangements.
+    </p>
+    <div class="no-cover-list">
+      <span>Body Removal</span><span>Mortuary Support</span><span>Caskets</span><span>Chapel Arrangements</span><span>Transport</span><span>Burial Assistance</span>
+    </div>
+    <div class="section-actions">
+      <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20need%20funeral%20service%20assistance%20but%20there%20is%20no%20existing%20cover." target="_blank" class="btn-primary">Get Help Now</a>
+      <a href="#register" class="btn-outline">Register Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ONLINE REGISTRATION -->
+<section id="register" class="register-section">
+  <div class="container">
+    <div class="register-header reveal">
+      <span class="section-label">Online Membership</span>
+      <h2 class="section-title">Register for Funeral Cover Online</h2>
+      <p class="section-sub" style="margin:0 auto;">Fill in the membership details below and submit them directly to Zonyik Funeral Services via WhatsApp.</p>
+    </div>
+    <form class="membership-form reveal" onsubmit="submitZonyikRegistration(event)">
+      <h3>Main Member Details</h3>
+      <div class="form-grid">
+        <label>Surname <input type="text" name="surname" required></label>
+        <label>First Names <input type="text" name="firstNames" required></label>
+        <label>Date of Birth <input type="date" name="dob" required></label>
+        <label>ID Number <input type="text" name="idNumber" required></label>
+        <label>Other ID / Passport <input type="text" name="otherId"></label>
+        <label>Gender <select name="gender" required><option value="">Select</option><option>Female</option><option>Male</option><option>Other / Prefer not to say</option></select></label>
+        <label>Residential Address <input type="text" name="address" required></label>
+        <label>Email Address <input type="email" name="email"></label>
+        <label>Contact Telephone <input type="tel" name="phone" required></label>
+        <label>Next of Kin <input type="text" name="nextOfKin" required></label>
+        <label>Policy / Package <select name="policy" required><option value="">Select package</option><option>Monkey Package - US$1.00 per head</option><option>Zebra Package - US$2.00 per head</option><option>Lion Package - US$3.00 per head</option><option>Giraffe Package - US$3.00 per head</option><option>Cheetah Package - US$5.00 per head</option><option>Senior Citizens Package</option><option>Other / Not sure yet</option></select></label>
+        <label>Total Premium Payable <input type="text" name="premium" placeholder="e.g. US$10"></label>
+      </div>
+      <h3>Family Members / Dependants</h3>
+      <p class="form-help">Add dependants below. Leave unused rows blank.</p>
+      <div class="dependants-grid">
+        <input type="text" name="dep1Name" placeholder="1. Full name"><input type="text" name="dep1Gender" placeholder="Gender"><input type="text" name="dep1Dob" placeholder="Date of birth"><input type="text" name="dep1Id" placeholder="ID number"><input type="text" name="dep1Premium" placeholder="Premium">
+        <input type="text" name="dep2Name" placeholder="2. Full name"><input type="text" name="dep2Gender" placeholder="Gender"><input type="text" name="dep2Dob" placeholder="Date of birth"><input type="text" name="dep2Id" placeholder="ID number"><input type="text" name="dep2Premium" placeholder="Premium">
+        <input type="text" name="dep3Name" placeholder="3. Full name"><input type="text" name="dep3Gender" placeholder="Gender"><input type="text" name="dep3Dob" placeholder="Date of birth"><input type="text" name="dep3Id" placeholder="ID number"><input type="text" name="dep3Premium" placeholder="Premium">
+        <input type="text" name="dep4Name" placeholder="4. Full name"><input type="text" name="dep4Gender" placeholder="Gender"><input type="text" name="dep4Dob" placeholder="Date of birth"><input type="text" name="dep4Id" placeholder="ID number"><input type="text" name="dep4Premium" placeholder="Premium">
+      </div>
+      <label class="confirm-row"><input type="checkbox" name="confirm" required> I confirm that the information provided is correct and may be sent to Zonyik Funeral Services via WhatsApp.</label>
+      <button type="submit" class="btn-primary form-submit">Submit via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<!-- BOTTOM REGISTER CTA -->
+<section class="bottom-register-cta">
+  <div class="container bottom-register-inner reveal">
+    <h2>Ready to Join a Zonyik Funeral Plan?</h2>
+    <p>Register online and send your completed membership details straight to Zonyik on WhatsApp.</p>
+    <a href="#register" class="btn-primary">Register Now</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <span class="section-label" style="background:var(--gold);color:var(--navy);">Get In Touch</span>
+      <h2>Contact Us</h2>
+      <p style="color:rgba(255,255,255,0.7);font-size:0.95rem;margin-bottom:2rem;">We are One Call Away — 24/7, always here for your family.</p>
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div>
+          <h4>Phone / WhatsApp</h4>
+          <a href="tel:+263773389746">+263 773 389 746</a><br>
+          <a href="tel:+263719389746">+263 719 389 746</a><br>
+          <a href="tel:+263732389746">+263 732 389 746</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <h4>Address</h4>
+          <p>154 Mbuya Nehanda Street,<br>Harare, Zimbabwe</p>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">🌐</div>
+        <div>
+          <h4>Website</h4>
+          <a href="https://zonyikservices.com" target="_blank">zonyikservices.com</a>
+        </div>
+      </div>
+      <div class="contact-buttons">
+        <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20need%20assistance" target="_blank" class="cta-wa">💬 Chat on WhatsApp</a>
+        <a href="https://www.facebook.com/ZONYIKFUNERAL?mibextid=ZbWKwL" target="_blank" class="cta-fb">👍 Visit Us on Facebook</a>
+        <a href="https://maps.app.goo.gl/i7MmqBhwnvXEZYce6" target="_blank" class="cta-maps">📍 Get Directions on Google Maps</a>
+      </div>
+    </div>
+    <div class="map-embed reveal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3797.4!2d31.0439!3d-17.8277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s154+Mbuya+Nehanda+Street%2C+Harare!5e0!3m2!1sen!2szw!4v1680000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">ZONYIK Funeral Services</div>
+  <p>"...In the arms of the Lord I will Rest"</p>
+  <p style="margin-top:0.5rem;">154 Mbuya Nehanda Street, Harare, Zimbabwe &nbsp;|&nbsp; <a href="tel:+263773389746">+263 773 389 746</a></p>
+  <p style="margin-top:0.5rem;">
+    <a href="https://www.facebook.com/ZONYIKFUNERAL?mibextid=ZbWKwL" target="_blank">Facebook</a> &nbsp;|&nbsp;
+    <a href="https://wa.me/263773389746" target="_blank">WhatsApp</a> &nbsp;|&nbsp;
+    <a href="https://zonyikservices.com" target="_blank">zonyikservices.com</a>
+  </p>
+  <p style="margin-top:1rem;font-size:0.75rem;">Underwritten by Econet Life Private Limited &nbsp;·&nbsp; EcoSure Registered Funeral Partner</p>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+</script>
+
+<script>
+function formValue(form, name) {
+  const field = form.elements[name];
+  return field ? String(field.value || '').trim() : '';
+}
+function submitZonyikRegistration(event) {
+  event.preventDefault();
+  const form = event.target;
+  const dependants = [];
+  for (let i = 1; i <= 4; i++) {
+    const name = formValue(form, `dep${i}Name`);
+    const gender = formValue(form, `dep${i}Gender`);
+    const dob = formValue(form, `dep${i}Dob`);
+    const id = formValue(form, `dep${i}Id`);
+    const premium = formValue(form, `dep${i}Premium`);
+    if (name || gender || dob || id || premium) {
+      dependants.push(`${i}. Name: ${name || '-'}\n   Gender: ${gender || '-'}\n   Date of Birth: ${dob || '-'}\n   ID Number: ${id || '-'}\n   Premium: ${premium || '-'}`);
+    }
+  }
+  const message =
+`NEW ZONYIK MEMBERSHIP APPLICATION
+
+Main Member Details:
+Surname: ${formValue(form, 'surname')}
+First Names: ${formValue(form, 'firstNames')}
+Date of Birth: ${formValue(form, 'dob')}
+ID Number: ${formValue(form, 'idNumber')}
+Other ID / Passport: ${formValue(form, 'otherId') || '-'}
+Gender: ${formValue(form, 'gender')}
+Residential Address: ${formValue(form, 'address')}
+Email Address: ${formValue(form, 'email') || '-'}
+Contact Telephone: ${formValue(form, 'phone')}
+Next of Kin: ${formValue(form, 'nextOfKin')}
+Policy / Package: ${formValue(form, 'policy')}
+Total Premium Payable: ${formValue(form, 'premium') || '-'}
+
+Family Members / Dependants:
+${dependants.length ? dependants.join('\n\n') : 'No dependants added.'}
+
+Confirmation:
+I confirm that the information provided is correct.`;
+  const whatsappNumber = '263773389746';
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
