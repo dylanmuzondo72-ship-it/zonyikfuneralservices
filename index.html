@@ -329,111 +329,61 @@
     .nav-logo-text { display: none; }
   }
 
-/* ===== FINAL VERTICAL LAYOUT FIX ===== */
+/* ===== FINAL COMPLETE UPDATE ===== */
 html, body { max-width: 100%; overflow-x: hidden !important; }
 img { max-width: 100%; }
 section, #banner, #covered { scroll-margin-top: 82px; }
-
-.nav-logo img {
-  height: 48px !important; width: auto !important; object-fit: contain !important;
-  display: block !important; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.22));
-}
-.hero-logo-img {
-  width: clamp(120px, 14vw, 165px) !important; height: auto !important;
-  object-fit: contain !important; display: block !important;
-  margin-left: auto; margin-right: auto;
-  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.25));
-}
-
-/* Normal vertical scroll on desktop too */
-#hero, #banner, .about-grid, .services-top, .peace-grid, .senior-grid, .eco-grid, .scripture-inner, .contact-grid {
-  display: grid !important;
-  grid-template-columns: 1fr !important;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#hero {
-  max-width: none !important;
-  min-height: auto !important;
-  padding-top: 68px !important;
-  background: linear-gradient(135deg, var(--navy) 0%, #0d2260 65%, #0a3080 100%) !important;
-}
-.hero-left {
-  text-align: center !important; align-items: center !important;
-  padding: 4rem 2rem 2rem !important; max-width: 900px; margin: 0 auto;
-}
+.nav-actions { display: flex; gap: 10px; align-items: center; }
+.register-top { background: #ffffff !important; color: var(--navy) !important; }
+.nav-logo img { height: 48px !important; width: auto !important; object-fit: contain !important; display: block !important; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.22)); }
+.hero-logo-img { width: clamp(150px, 20vw, 230px) !important; height: auto !important; object-fit: contain !important; display: block !important; margin-left: auto; margin-right: auto; filter: drop-shadow(0 8px 20px rgba(0,0,0,0.25)); }
+#hero, #banner, .about-grid, .services-top, .peace-grid, .senior-grid, .eco-grid, .scripture-inner, .contact-grid { display: grid !important; grid-template-columns: 1fr !important; max-width: 1100px; margin-left: auto; margin-right: auto; }
+#hero { max-width: none !important; min-height: auto !important; padding-top: 68px !important; background: linear-gradient(135deg, var(--navy) 0%, #0d2260 65%, #0a3080 100%) !important; }
+.hero-left { text-align: center !important; align-items: center !important; padding: 4rem 2rem 2rem !important; max-width: 900px; margin: 0 auto; }
 .hero-sub { margin-left: auto; margin-right: auto; }
 .hero-buttons, .hero-badges { justify-content: center !important; }
-.hero-right {
-  width: min(100%, 900px) !important; height: auto !important; min-height: 0 !important;
-  margin: 0 auto 3rem !important; overflow: visible !important; border-radius: 14px;
-  background: rgba(255,255,255,0.06);
-}
-.hero-right img {
-  width: 100% !important; height: auto !important; object-fit: contain !important;
-  object-position: center !important; display: block !important; opacity: 1 !important; border-radius: 14px;
-}
-
-#banner {
-  max-width: none !important; background: linear-gradient(135deg, #0d2260, #1a4aaa) !important;
-  padding: 3rem 2rem !important; min-height: auto !important;
-}
+.hero-right { width: min(100%, 900px) !important; height: auto !important; min-height: 0 !important; margin: 0 auto 3rem !important; overflow: visible !important; border-radius: 14px; background: rgba(255,255,255,0.06); }
+.hero-right img { width: 100% !important; height: auto !important; object-fit: contain !important; object-position: center !important; display: block !important; opacity: 1 !important; border-radius: 14px; }
+#banner { max-width: none !important; background: linear-gradient(135deg, #0d2260, #1a4aaa) !important; padding: 3rem 2rem !important; min-height: auto !important; }
 .banner-img, .banner-text { max-width: 900px; width: 100%; margin-left: auto; margin-right: auto; }
-.banner-img {
-  height: auto !important; background: #ffffff; border-radius: 14px; overflow: hidden;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.18);
-}
-.banner-img img {
-  width: 100% !important; height: auto !important; object-fit: contain !important; display: block !important;
-}
+.banner-img { height: auto !important; background: #ffffff; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 28px rgba(0,0,0,0.18); }
+.banner-img img { width: 100% !important; height: auto !important; object-fit: contain !important; display: block !important; }
 .banner-text { text-align: center; padding: 2.2rem 1rem 0 !important; }
-
-.about-img-stack, .senior-imgs {
-  display: grid !important; grid-template-columns: 1fr !important; gap: 1.2rem !important;
-  max-width: 760px; margin-left: auto; margin-right: auto;
-}
-.about-img-stack img, .senior-imgs img, #covered img, .plan-card img, .casket-card img,
-.services-flyer img, .peace-img img, .eco-img img, .scripture-img img {
-  width: 100% !important; height: auto !important; max-height: none !important;
-  object-fit: contain !important; object-position: center !important; display: block !important;
-  background: #ffffff;
-}
+.about-img-stack, .senior-imgs { display: grid !important; grid-template-columns: 1fr !important; gap: 1.2rem !important; max-width: 760px; margin-left: auto; margin-right: auto; }
+.about-img-stack img, .senior-imgs img, #covered img, .plan-card img, .casket-card img, .services-flyer img, .peace-img img, .eco-img img, .scripture-img img { width: 100% !important; height: auto !important; max-height: none !important; object-fit: contain !important; object-position: center !important; display: block !important; background: #ffffff; }
 #covered { background: #ffffff !important; }
 #covered img { max-width: 900px; margin-left: auto; margin-right: auto; }
-.about-text, .services-header, .peace-text, .senior-text, .eco-text, .scripture-card, .contact-info {
-  max-width: 850px; margin-left: auto; margin-right: auto; text-align: center;
-}
+.about-text, .services-header, .peace-text, .senior-text, .eco-text, .scripture-card, .contact-info { max-width: 850px; margin-left: auto; margin-right: auto; text-align: center; }
 .eco-img { max-width: 900px; margin-left: auto; margin-right: auto; }
 .eco-img img { border-radius: 14px !important; box-shadow: 0 10px 28px rgba(0,0,0,0.12) !important; }
-.plan-card img, .casket-card img { background: #ffffff !important; }
-
+.caskets-grid { display: grid !important; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important; gap: 1.5rem !important; }
+.casket-card img { aspect-ratio: 16 / 10; object-fit: contain !important; padding: 0.4rem; background: #ffffff !important; }
+.mini-wa { display: inline-block; margin-top: 0.8rem; color: var(--navy); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--gold); }
+.no-cover-section { background: linear-gradient(135deg, var(--navy), #102c7a); padding: 90px 2rem; text-align: center; }
+.no-cover-inner { max-width: 920px; margin: 0 auto; }
+.no-cover-list { margin: 1.8rem auto 2rem; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.no-cover-list span { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.18); color: #ffffff; padding: 9px 14px; border-radius: 999px; font-weight: 700; font-size: 0.86rem; }
+.section-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.register-section { background: #f5f7fa; padding: 90px 2rem; }
+.register-header { text-align: center; margin-bottom: 2.5rem; }
+.membership-form { max-width: 1000px; margin: 0 auto; background: #ffffff; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 35px rgba(0,0,0,0.08); }
+.membership-form h3 { font-family: 'Playfair Display', serif; color: var(--navy); margin: 1rem 0; font-size: 1.35rem; }
+.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.membership-form label { display: flex; flex-direction: column; gap: 6px; color: var(--navy); font-weight: 700; font-size: 0.88rem; }
+.membership-form input, .membership-form select { width: 100%; padding: 12px 13px; border: 1px solid #d8deea; border-radius: 8px; font: inherit; background: #ffffff; color: var(--text); }
+.form-help { color: var(--dark-gray); margin-bottom: 1rem; }
+.dependants-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr 1fr; gap: 0.7rem; }
+.confirm-row { flex-direction: row !important; align-items: flex-start; margin: 1.5rem 0; color: var(--text) !important; }
+.confirm-row input { width: auto; margin-top: 4px; }
+.form-submit { border: none; cursor: pointer; }
+.bottom-register-cta { background: #050d24; color: #ffffff; text-align: center; padding: 70px 2rem; }
+.bottom-register-inner { max-width: 850px; margin: 0 auto; }
+.bottom-register-cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 4vw, 2.6rem); margin-bottom: 0.7rem; }
+.bottom-register-cta p { color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; }
 .float-bar { right: 18px !important; bottom: 18px !important; gap: 10px !important; }
 .float-btn { width: 52px !important; height: 52px !important; font-size: 1.2rem !important; }
-
-@media (min-width: 901px) {
-  .services-top, .peace-grid, .senior-grid, .eco-grid, .scripture-inner, .contact-grid { gap: 2.5rem !important; }
-  .services-flyer, .peace-img, .eco-img, .scripture-img { max-width: 900px; margin-left: auto; margin-right: auto; }
-  .plans-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important; }
-  .caskets-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important; }
-}
-@media (max-width: 900px) {
-  nav { height: 60px !important; padding: 0 1rem !important; }
-  .nav-logo img { height: 40px !important; }
-  #hero { padding-top: 60px !important; }
-  .hero-left { padding: 2.4rem 1.2rem 1.5rem !important; }
-  .hero-logo-img { width: 100px !important; }
-  #banner { padding: 2rem 1.2rem !important; }
-  .plans-grid, .caskets-grid, .services-grid, .pillars, .peace-cards { grid-template-columns: 1fr !important; }
-  .float-bar { right: 12px !important; bottom: 14px !important; gap: 8px !important; }
-  .float-btn { width: 46px !important; height: 46px !important; font-size: 1.1rem !important; }
-}
-@media (max-width: 480px) {
-  .nav-logo-text { display: none !important; }
-  .nav-cta { padding: 8px 12px !important; font-size: 0.74rem !important; }
-  .hero-title { font-size: 1.95rem !important; }
-}
+@media (max-width: 900px) { nav { height: 60px !important; padding: 0 0.8rem !important; } .nav-logo img { height: 38px !important; } .nav-actions { gap: 6px; } .nav-cta { padding: 8px 10px !important; font-size: 0.72rem !important; } #hero { padding-top: 60px !important; } .hero-left { padding: 2.4rem 1.2rem 1.5rem !important; } .hero-logo-img { width: 140px !important; } #banner { padding: 2rem 1.2rem !important; } .plans-grid, .caskets-grid, .services-grid, .pillars, .peace-cards, .form-grid { grid-template-columns: 1fr !important; } .dependants-grid { grid-template-columns: 1fr !important; gap: 0.6rem; padding-bottom: 1rem; border-bottom: 1px solid #e3e8f2; margin-bottom: 1rem; } .membership-form { padding: 1.2rem; } .float-bar { right: 12px !important; bottom: 14px !important; gap: 8px !important; } .float-btn { width: 46px !important; height: 46px !important; font-size: 1.1rem !important; } }
+@media (max-width: 520px) { .nav-logo-text { display: none !important; } .register-top { display: inline-flex; } .hero-title { font-size: 1.95rem !important; } }
 
 </style>
 </head>
@@ -442,7 +392,7 @@ section, #banner, #covered { scroll-margin-top: 82px; }
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <img src="images/zonyik-mark.png" alt="Zonyik Logo">
+    <img src="images/IMG-20260422-WA0013.jpg" alt="Zonyik Logo">
     <div class="nav-logo-text">ZONYIK FUNERAL SERVICES <small>"...In the arms of the Lord I will Rest"</small></div>
   </div>
   <ul class="nav-links">
@@ -452,7 +402,7 @@ section, #banner, #covered { scroll-margin-top: 82px; }
     <li><a href="#caskets">Caskets</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="https://wa.me/263773389746" target="_blank" class="nav-cta">💬 WhatsApp Us</a>
+  <div class="nav-actions"><a href="#register" class="nav-cta register-top">Register Now</a><a href="https://wa.me/263773389746" target="_blank" class="nav-cta">💬 WhatsApp Us</a></div>
 </nav>
 
 <!-- FLOATING BUTTONS -->
@@ -465,12 +415,13 @@ section, #banner, #covered { scroll-margin-top: 82px; }
 <!-- HERO -->
 <section id="hero">
   <div class="hero-left reveal">
-    <img src="images/zonyik-logo.png" alt="Zonyik Logo" class="hero-logo-img">
+    <img src="images/zonyik-logo-new.png" alt="Zonyik Logo" class="hero-logo-img">
     <h1 class="hero-title">ZONYIK<br><span>Funeral Services</span></h1>
     <p class="hero-tagline">"...In the arms of the Lord I will Rest"</p>
     <p class="hero-sub">Compassionate, affordable and dignified funeral services in Harare, Zimbabwe. We are <strong>One Call Away</strong> — always here for your family.</p>
     <div class="hero-buttons">
-      <a href="https://wa.me/263773389746" target="_blank" class="btn-primary">💬 WhatsApp Us</a>
+      <a href="#register" class="btn-primary">Register Now</a>
+      <a href="https://wa.me/263773389746" target="_blank" class="btn-outline">💬 WhatsApp Us</a>
       <a href="#plans" class="btn-outline">View Our Plans</a>
     </div>
     <div class="hero-badges">
@@ -633,49 +584,104 @@ section, #banner, #covered { scroll-margin-top: 82px; }
   </div>
 </section>
 
+
 <!-- CASKETS -->
 <section id="caskets">
   <div class="container">
     <div class="caskets-header reveal">
       <span class="section-label">The Coffin Shop</span>
-      <h2 class="section-title">Our Casket & Coffin Range</h2>
-      <p class="section-sub" style="margin:0 auto;">Quality caskets and coffins to honour your loved one with dignity. Visit us at 154 Mbuya Nehanda Street, Harare.</p>
+      <h2 class="section-title">Our Casket Range</h2>
+      <p class="section-sub" style="margin:0 auto;">Quality caskets and coffins to honour your loved one with dignity. Contact us to confirm availability and pricing.</p>
     </div>
     <div class="caskets-grid">
 
-      <!-- Image 2: Dome Boston Casket -->
       <div class="casket-card reveal">
-        <img src="images/IMG-20260422-WA0033.jpg" alt="Dome Boston Casket">
+        <img src="images/dome-boston-casket.jpg" alt="Dome Boston Casket">
         <div class="casket-info">
           <h3>Dome Boston Casket</h3>
-          <p>Premium domed lid with rich warm wood finish and ornate gold handles. Included in Lion, Giraffe & Cheetah plans.</p>
+          <p>Premium white domed casket with gold-tone handles.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%20Dome%20Boston%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
         </div>
       </div>
 
-      <!-- Image 3: Dome Windsor Casket -->
       <div class="casket-card reveal">
-        <img src="images/IMG-20260422-WA0030.jpg" alt="Dome Windsor Casket">
+        <img src="images/dome-windsor-casket.jpg" alt="Dome Windsor Casket">
         <div class="casket-info">
           <h3>Dome Windsor Casket</h3>
-          <p>Elegant Windsor dome design with polished wood and solid gold-tone hardware. A dignified farewell.</p>
+          <p>Elegant wood-finish Windsor dome casket.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%20Dome%20Windsor%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
         </div>
       </div>
 
-      <!-- Image 4: Flat Coffin -->
       <div class="casket-card reveal">
-        <img src="images/IMG-20260422-WA0035.jpg" alt="Flat Coffin – Brown and White">
+        <img src="images/two-tier-casket.jpg" alt="2 Tier Casket">
         <div class="casket-info">
-          <h3>Flat Coffin</h3>
-          <p>Available in classic brown wood grain or white finish with gold fittings. Included in the Monkey Plan.</p>
+          <h3>2 Tier Casket</h3>
+          <p>Two-tier casket option with polished wood finish.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%202%20Tier%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
         </div>
       </div>
 
-      <!-- Image 11: Coffin Shop interior -->
       <div class="casket-card reveal">
-        <img src="images/IMG-20260422-WA0011.jpg" alt="The Coffin Shop – Zonyik Funeral Services">
+        <img src="images/flat-casket.jpg" alt="Flat Casket">
         <div class="casket-info">
-          <h3>In-Store Collection</h3>
-          <p>Visit The Coffin Shop at 154 Mbuya Nehanda Street, Harare to view our full range of caskets and coffins in person.</p>
+          <h3>Flat Casket</h3>
+          <p>Classic flat casket with rich wood finish.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%20Flat%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+      <div class="casket-card reveal">
+        <img src="images/three-tier-boston-casket.jpg" alt="3 Tier Boston Casket">
+        <div class="casket-info">
+          <h3>3 Tier Boston Casket</h3>
+          <p>Three-tier Boston design with gold-tone fittings.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%203%20Tier%20Boston%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+      <div class="casket-card reveal">
+        <img src="images/three-tier-windsor-casket.jpg" alt="3 Tier Windsor Casket">
+        <div class="casket-info">
+          <h3>3 Tier Windsor Casket</h3>
+          <p>Premium three-tier Windsor casket in polished wood.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%203%20Tier%20Windsor%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+      <div class="casket-card reveal">
+        <img src="images/import-casket.jpg" alt="Import Casket">
+        <div class="casket-info">
+          <h3>Import Casket</h3>
+          <p>Premium import casket with detailed gold-tone hardware.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%20Import%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+      <div class="casket-card reveal">
+        <img src="images/three-tier-windson-casket.jpg" alt="3 Tier Windson Casket">
+        <div class="casket-info">
+          <h3>3 Tier Windson Casket</h3>
+          <p>High-end three-tier Windson casket design.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%203%20Tier%20Windson%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+      <div class="casket-card reveal">
+        <img src="images/three-tier-windsor-open-casket.jpg" alt="3 Tier Windsor Casket - Open View">
+        <div class="casket-info">
+          <h3>3 Tier Windsor Casket - Open View</h3>
+          <p>Three-tier Windsor casket with open interior view.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%203%20Tier%20Windsor%20Casket%20-%20Open%20View" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+      <div class="casket-card reveal">
+        <img src="images/dome-wrap-around-casket.jpg" alt="Dome Wrap Around Casket">
+        <div class="casket-info">
+          <h3>Dome Wrap Around Casket</h3>
+          <p>White dome wrap-around casket with gold-tone detailing.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%20Dome%20Wrap%20Around%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
         </div>
       </div>
 
@@ -788,6 +794,72 @@ section, #banner, #covered { scroll-margin-top: 82px; }
   </div>
 </section>
 
+
+<!-- NO COVER SUPPORT -->
+<section id="no-cover" class="no-cover-section">
+  <div class="container no-cover-inner reveal">
+    <span class="section-label">Immediate Support</span>
+    <h2 class="section-title light">No Cover? We Can Still Help.</h2>
+    <p class="section-sub light">
+      Even if your loved one was not registered under an existing funeral cover or policy, Zonyik Funeral Services can still assist your family with dignified funeral arrangements.
+    </p>
+    <div class="no-cover-list">
+      <span>Body Removal</span><span>Mortuary Support</span><span>Caskets</span><span>Chapel Arrangements</span><span>Transport</span><span>Burial Assistance</span>
+    </div>
+    <div class="section-actions">
+      <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20need%20funeral%20service%20assistance%20but%20there%20is%20no%20existing%20cover." target="_blank" class="btn-primary">Get Help Now</a>
+      <a href="#register" class="btn-outline">Register Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ONLINE REGISTRATION -->
+<section id="register" class="register-section">
+  <div class="container">
+    <div class="register-header reveal">
+      <span class="section-label">Online Membership</span>
+      <h2 class="section-title">Register for Funeral Cover Online</h2>
+      <p class="section-sub" style="margin:0 auto;">Fill in the membership details below and submit them directly to Zonyik Funeral Services via WhatsApp.</p>
+    </div>
+    <form class="membership-form reveal" onsubmit="submitZonyikRegistration(event)">
+      <h3>Main Member Details</h3>
+      <div class="form-grid">
+        <label>Surname <input type="text" name="surname" required></label>
+        <label>First Names <input type="text" name="firstNames" required></label>
+        <label>Date of Birth <input type="date" name="dob" required></label>
+        <label>ID Number <input type="text" name="idNumber" required></label>
+        <label>Other ID / Passport <input type="text" name="otherId"></label>
+        <label>Gender <select name="gender" required><option value="">Select</option><option>Female</option><option>Male</option><option>Other / Prefer not to say</option></select></label>
+        <label>Residential Address <input type="text" name="address" required></label>
+        <label>Email Address <input type="email" name="email"></label>
+        <label>Contact Telephone <input type="tel" name="phone" required></label>
+        <label>Next of Kin <input type="text" name="nextOfKin" required></label>
+        <label>Policy / Package <select name="policy" required><option value="">Select package</option><option>Monkey Package - US$1.00 per head</option><option>Zebra Package - US$2.00 per head</option><option>Lion Package - US$3.00 per head</option><option>Giraffe Package - US$3.00 per head</option><option>Cheetah Package - US$5.00 per head</option><option>Senior Citizens Package</option><option>Other / Not sure yet</option></select></label>
+        <label>Total Premium Payable <input type="text" name="premium" placeholder="e.g. US$10"></label>
+      </div>
+      <h3>Family Members / Dependants</h3>
+      <p class="form-help">Add dependants below. Leave unused rows blank.</p>
+      <div class="dependants-grid">
+        <input type="text" name="dep1Name" placeholder="1. Full name"><input type="text" name="dep1Gender" placeholder="Gender"><input type="text" name="dep1Dob" placeholder="Date of birth"><input type="text" name="dep1Id" placeholder="ID number"><input type="text" name="dep1Premium" placeholder="Premium">
+        <input type="text" name="dep2Name" placeholder="2. Full name"><input type="text" name="dep2Gender" placeholder="Gender"><input type="text" name="dep2Dob" placeholder="Date of birth"><input type="text" name="dep2Id" placeholder="ID number"><input type="text" name="dep2Premium" placeholder="Premium">
+        <input type="text" name="dep3Name" placeholder="3. Full name"><input type="text" name="dep3Gender" placeholder="Gender"><input type="text" name="dep3Dob" placeholder="Date of birth"><input type="text" name="dep3Id" placeholder="ID number"><input type="text" name="dep3Premium" placeholder="Premium">
+        <input type="text" name="dep4Name" placeholder="4. Full name"><input type="text" name="dep4Gender" placeholder="Gender"><input type="text" name="dep4Dob" placeholder="Date of birth"><input type="text" name="dep4Id" placeholder="ID number"><input type="text" name="dep4Premium" placeholder="Premium">
+      </div>
+      <label class="confirm-row"><input type="checkbox" name="confirm" required> I confirm that the information provided is correct and may be sent to Zonyik Funeral Services via WhatsApp.</label>
+      <button type="submit" class="btn-primary form-submit">Submit via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<!-- BOTTOM REGISTER CTA -->
+<section class="bottom-register-cta">
+  <div class="container bottom-register-inner reveal">
+    <h2>Ready to Join a Zonyik Funeral Plan?</h2>
+    <p>Register online and send your completed membership details straight to Zonyik on WhatsApp.</p>
+    <a href="#register" class="btn-primary">Register Now</a>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-grid">
@@ -850,5 +922,53 @@ section, #banner, #covered { scroll-margin-top: 82px; }
   }, { threshold: 0.1 });
   reveals.forEach(r => observer.observe(r));
 </script>
+
+<script>
+function formValue(form, name) {
+  const field = form.elements[name];
+  return field ? String(field.value || '').trim() : '';
+}
+function submitZonyikRegistration(event) {
+  event.preventDefault();
+  const form = event.target;
+  const dependants = [];
+  for (let i = 1; i <= 4; i++) {
+    const name = formValue(form, `dep${i}Name`);
+    const gender = formValue(form, `dep${i}Gender`);
+    const dob = formValue(form, `dep${i}Dob`);
+    const id = formValue(form, `dep${i}Id`);
+    const premium = formValue(form, `dep${i}Premium`);
+    if (name || gender || dob || id || premium) {
+      dependants.push(`${i}. Name: ${name || '-'}\n   Gender: ${gender || '-'}\n   Date of Birth: ${dob || '-'}\n   ID Number: ${id || '-'}\n   Premium: ${premium || '-'}`);
+    }
+  }
+  const message =
+`NEW ZONYIK MEMBERSHIP APPLICATION
+
+Main Member Details:
+Surname: ${formValue(form, 'surname')}
+First Names: ${formValue(form, 'firstNames')}
+Date of Birth: ${formValue(form, 'dob')}
+ID Number: ${formValue(form, 'idNumber')}
+Other ID / Passport: ${formValue(form, 'otherId') || '-'}
+Gender: ${formValue(form, 'gender')}
+Residential Address: ${formValue(form, 'address')}
+Email Address: ${formValue(form, 'email') || '-'}
+Contact Telephone: ${formValue(form, 'phone')}
+Next of Kin: ${formValue(form, 'nextOfKin')}
+Policy / Package: ${formValue(form, 'policy')}
+Total Premium Payable: ${formValue(form, 'premium') || '-'}
+
+Family Members / Dependants:
+${dependants.length ? dependants.join('\n\n') : 'No dependants added.'}
+
+Confirmation:
+I confirm that the information provided is correct.`;
+  const whatsappNumber = '263773389746';
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
+</script>
+
 </body>
 </html>
