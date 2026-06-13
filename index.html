@@ -396,6 +396,63 @@ section, #banner, #covered { scroll-margin-top: 82px; }
 .brand-footer span, .footer-logo.brand-footer span { display: block; color: var(--gold) !important; text-transform: none; letter-spacing: 0.5px; font-family: Arial, Helvetica, sans-serif !important; font-weight: 700; font-size: 0.9rem; margin-top: 0.25rem; }
 footer { font-family: Arial, Helvetica, sans-serif !important; }
 
+
+/* ===== FINAL CLEANUP: NAV LOGO, DUPLICATES, FOOTER ===== */
+.nav-logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+.nav-logo-img,
+.nav-logo img {
+  height: 54px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.28)) !important;
+}
+.poster-card img,
+.about-img-stack img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+.footer-logo.brand-footer {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 1.35rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  line-height: 1.2 !important;
+}
+.footer-logo.brand-footer span {
+  display: block !important;
+  color: var(--gold) !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.5px !important;
+  text-transform: none !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-weight: 700 !important;
+  margin-top: 0.25rem !important;
+}
+footer,
+footer a {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+@media (max-width: 900px) {
+  .nav-logo-img,
+  .nav-logo img { height: 44px !important; }
+}
+@media (max-width: 520px) {
+  .nav-logo-img,
+  .nav-logo img { height: 42px !important; }
+}
+
 </style>
 </head>
 <body>
@@ -403,7 +460,7 @@ footer { font-family: Arial, Helvetica, sans-serif !important; }
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <img src="images/IMG-20260422-WA0013.jpg" alt="Zonyik Logo">
+    <img src="images/zonyik-mark-clean.png" alt="Zonyik Logo" class="nav-logo-img">
     <div class="nav-logo-text">ZONYIK FUNERAL SERVICES <small>"...In the arms of the Lord I will Rest"</small></div>
   </div>
   <ul class="nav-links">
@@ -465,7 +522,7 @@ footer { font-family: Arial, Helvetica, sans-serif !important; }
       <!-- Image 1: Elderly man "May we find comfort" -->
       <img src="images/IMG-20260422-WA0044.jpg" alt="May we find comfort in the treasured memories">
       <!-- Image 18: "Ensure You and your loved ones are Covered" -->
-      <img src="images/customer-experience.jpg" alt="Zonyik Funeral Services customer experience">
+      <img src="images/from-as-little.jpg" alt="Zonyik funeral cover from as little as US$1.00">
       <!-- Image 9: One Call Away -->
       <img src="images/no-stress-support.jpg" alt="No stress funeral support from Zonyik">
     </div>
@@ -622,15 +679,6 @@ footer { font-family: Arial, Helvetica, sans-serif !important; }
           <h3>Dome Windsor Casket</h3>
           <p>Elegant wood-finish Windsor dome casket.</p>
           <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%20Dome%20Windsor%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
-        </div>
-      </div>
-
-      <div class="casket-card reveal">
-        <img src="images/two-tier-casket.jpg" alt="2 Tier Casket">
-        <div class="casket-info">
-          <h3>2 Tier Casket</h3>
-          <p>Two-tier casket option with polished wood finish.</p>
-          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%202%20Tier%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
         </div>
       </div>
 
@@ -846,7 +894,7 @@ footer { font-family: Arial, Helvetica, sans-serif !important; }
         <label>Email Address <input type="email" name="email"></label>
         <label>Contact Telephone <input type="tel" name="phone" required></label>
         <label>Next of Kin <input type="text" name="nextOfKin" required></label>
-        <label>Policy / Package <select name="policy" required><option value="">Select package</option><option>Monkey Package - US$1.00 per head</option><option>Zebra Package - US$2.00 per head</option><option>Lion Package - US$3.00 per head</option><option>Giraffe Package - US$3.00 per head</option><option>Cheetah Package - US$5.00 per head</option><option>Senior Citizens Package</option><option>Other / Not sure yet</option></select></label>
+        <label>Policy / Package <select name="policy" required><option value="">Select package</option><option>Monkey Package - US$1.00 per head</option><option>Zebra Package - US$2.00 per head</option><option>Lion Package - US$3.00 per head</option><option>Cheetah Package - US$5.00 per head</option><option>Senior Citizens Package</option><option>Other / Not sure yet</option></select></label>
         <label>Total Premium Payable <input type="text" name="premium" placeholder="e.g. US$10"></label>
       </div>
       <h3>Family Members / Dependants</h3>
@@ -899,7 +947,7 @@ footer { font-family: Arial, Helvetica, sans-serif !important; }
         <div class="contact-icon">🌐</div>
         <div>
           <h4>Website</h4>
-          <a href="https://www.zonyikfuneral.com" target="_blank">www.zonyikfuneral.com</a>
+          <a href="https://zonyikfuneralservices.com" target="_blank">zonyikfuneralservices.com</a>
         </div>
       </div>
       <div class="contact-buttons">
@@ -922,7 +970,7 @@ footer { font-family: Arial, Helvetica, sans-serif !important; }
   <p style="margin-top:0.5rem;">
     <a href="https://www.facebook.com/ZONYIKFUNERAL?mibextid=ZbWKwL" target="_blank">Facebook</a> &nbsp;|&nbsp;
     <a href="https://wa.me/263773389746" target="_blank">WhatsApp</a> &nbsp;|&nbsp;
-    <a href="https://www.zonyikfuneral.com" target="_blank">www.zonyikfuneral.com</a>
+    <a href="https://zonyikfuneralservices.com" target="_blank">zonyikfuneralservices.com</a>
   </p>
   <p style="margin-top:1rem;font-size:0.75rem;">Underwritten by Econet Life Private Limited &nbsp;·&nbsp; EcoSure Registered Funeral Partner</p>
 </footer>
