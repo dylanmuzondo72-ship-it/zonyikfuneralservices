@@ -386,38 +386,15 @@ section, #banner, #covered { scroll-margin-top: 82px; }
 @media (max-width: 520px) { .nav-logo-text { display: none !important; } .register-top { display: inline-flex; } .hero-title { font-size: 1.95rem !important; } }
 
 
-/* ===== NAV LOGO FLOATING FIX ===== */
-.nav-logo {
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-}
-
-.nav-logo-img,
-.nav-logo img {
-  height: 54px !important;
-  width: auto !important;
-  object-fit: contain !important;
-  display: block !important;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.28)) !important;
-}
-
-@media (max-width: 900px) {
-  .nav-logo-img,
-  .nav-logo img {
-    height: 44px !important;
-  }
-}
-
-@media (max-width: 520px) {
-  .nav-logo-img,
-  .nav-logo img {
-    height: 42px !important;
-  }
-}
+/* ===== NEXT CLIENT EDITS ===== */
+.poster-section { padding: 90px 2rem; background: #ffffff; }
+.poster-section.light-poster { background: #f5f7fa; }
+.poster-header { text-align: center; margin-bottom: 2rem; }
+.poster-card { max-width: 920px; margin: 0 auto; border-radius: 16px; overflow: hidden; background: #ffffff; box-shadow: 0 12px 35px rgba(0,0,0,0.10); }
+.poster-card img { width: 100%; height: auto; display: block; object-fit: contain; }
+.brand-footer, .footer-logo.brand-footer { font-family: Arial, Helvetica, sans-serif !important; text-transform: uppercase; letter-spacing: 2px; font-weight: 900; color: #ffffff !important; font-size: 1.35rem !important; line-height: 1.2; }
+.brand-footer span, .footer-logo.brand-footer span { display: block; color: var(--gold) !important; text-transform: none; letter-spacing: 0.5px; font-family: Arial, Helvetica, sans-serif !important; font-weight: 700; font-size: 0.9rem; margin-top: 0.25rem; }
+footer { font-family: Arial, Helvetica, sans-serif !important; }
 
 </style>
 </head>
@@ -426,7 +403,7 @@ section, #banner, #covered { scroll-margin-top: 82px; }
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <img src="images/zonyik-logo-new.png" alt="Zonyik Logo" class="nav-logo-img">
+    <img src="images/IMG-20260422-WA0013.jpg" alt="Zonyik Logo">
     <div class="nav-logo-text">ZONYIK FUNERAL SERVICES <small>"...In the arms of the Lord I will Rest"</small></div>
   </div>
   <ul class="nav-links">
@@ -488,9 +465,9 @@ section, #banner, #covered { scroll-margin-top: 82px; }
       <!-- Image 1: Elderly man "May we find comfort" -->
       <img src="images/IMG-20260422-WA0044.jpg" alt="May we find comfort in the treasured memories">
       <!-- Image 18: "Ensure You and your loved ones are Covered" -->
-      <img src="images/IMG-20260422-WA0041.jpg" alt="Ensure you and your loved ones are covered">
+      <img src="images/customer-experience.jpg" alt="Zonyik Funeral Services customer experience">
       <!-- Image 9: One Call Away -->
-      <img src="images/IMG-20260422-WA0015.jpg" alt="One Call Away" style="display:none;">
+      <img src="images/no-stress-support.jpg" alt="No stress funeral support from Zonyik">
     </div>
     <div class="about-text reveal">
       <span class="section-label">Who We Are</span>
@@ -514,11 +491,21 @@ section, #banner, #covered { scroll-margin-top: 82px; }
   </div>
 </section>
 
-<!-- COVERED FULL-WIDTH -->
-<div id="covered">
-  <!-- Image 18: "Ensure You and your loved ones are Covered" -->
-  <img src="images/IMG-20260422-WA0041.jpg" alt="Ensure You and your loved ones are Covered – Affordable, Reliable, Dependable">
-</div>
+
+<!-- CUSTOMER EXPERIENCE -->
+<section id="customer-experience" class="poster-section light-poster">
+  <div class="container">
+    <div class="poster-header reveal">
+      <span class="section-label">Customer Experience</span>
+      <h2 class="section-title">Funeral Services That Understand Your Needs</h2>
+      <p class="section-sub" style="margin:0 auto;">Support that listens, guides and responds with care when your family needs it most.</p>
+    </div>
+    <div class="poster-card reveal">
+      <img src="images/customer-experience.jpg" alt="Zonyik Funeral Services customer experience">
+    </div>
+  </div>
+</section>
+
 
 <!-- SERVICES -->
 <section id="services">
@@ -587,15 +574,6 @@ section, #banner, #covered { scroll-margin-top: 82px; }
         </div>
       </div>
 
-      <!-- Image 14: Giraffe Package -->
-      <div class="plan-card reveal">
-        <img src="images/IMG-20260422-WA0007.jpg" alt="Giraffe Package – US$3.00 per head">
-        <div class="plan-card-info">
-          <h3>🦒 Giraffe Package – US$3.00/head</h3>
-          <p>Dome Casket · Body Removal · Mortuary | Chapel · Hearse · Grave Equipment · Age Limit 80 years · US$200 Cash Back</p>
-        </div>
-      </div>
-
       <!-- Image 6: Cheetah Package -->
       <div class="plan-card reveal">
         <img src="images/cheetah-package-new.jpg" alt="Cheetah Package – US$5.00 per head">
@@ -644,6 +622,15 @@ section, #banner, #covered { scroll-margin-top: 82px; }
           <h3>Dome Windsor Casket</h3>
           <p>Elegant wood-finish Windsor dome casket.</p>
           <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%20Dome%20Windsor%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
+        </div>
+      </div>
+
+      <div class="casket-card reveal">
+        <img src="images/two-tier-casket.jpg" alt="2 Tier Casket">
+        <div class="casket-info">
+          <h3>2 Tier Casket</h3>
+          <p>Two-tier casket option with polished wood finish.</p>
+          <a href="https://wa.me/263773389746?text=Hello%20Zonyik%2C%20I%20would%20like%20to%20ask%20about%20the%202%20Tier%20Casket" target="_blank" class="mini-wa">Ask About This Casket</a>
         </div>
       </div>
 
@@ -912,7 +899,7 @@ section, #banner, #covered { scroll-margin-top: 82px; }
         <div class="contact-icon">🌐</div>
         <div>
           <h4>Website</h4>
-          <a href="https://zonyikservices.com" target="_blank">zonyikservices.com</a>
+          <a href="https://www.zonyikfuneral.com" target="_blank">www.zonyikfuneral.com</a>
         </div>
       </div>
       <div class="contact-buttons">
@@ -929,13 +916,13 @@ section, #banner, #covered { scroll-margin-top: 82px; }
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">ZONYIK Funeral Services</div>
+  <div class="footer-logo brand-footer">ZONYIK <span>Funeral Services</span></div>
   <p>"...In the arms of the Lord I will Rest"</p>
   <p style="margin-top:0.5rem;">154 Mbuya Nehanda Street, Harare, Zimbabwe &nbsp;|&nbsp; <a href="tel:+263773389746">+263 773 389 746</a></p>
   <p style="margin-top:0.5rem;">
     <a href="https://www.facebook.com/ZONYIKFUNERAL?mibextid=ZbWKwL" target="_blank">Facebook</a> &nbsp;|&nbsp;
     <a href="https://wa.me/263773389746" target="_blank">WhatsApp</a> &nbsp;|&nbsp;
-    <a href="https://zonyikservices.com" target="_blank">zonyikservices.com</a>
+    <a href="https://www.zonyikfuneral.com" target="_blank">www.zonyikfuneral.com</a>
   </p>
   <p style="margin-top:1rem;font-size:0.75rem;">Underwritten by Econet Life Private Limited &nbsp;·&nbsp; EcoSure Registered Funeral Partner</p>
 </footer>
